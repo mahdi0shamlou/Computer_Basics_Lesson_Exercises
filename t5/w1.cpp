@@ -6,7 +6,7 @@ using namespace std;
 double calculateSeriesSum(double x, int terms) {
     double sum = 0.0;
     double term = x; // جمله اول: x
-    
+    cout << term << "\n";
     for (int i = 1; i <= terms; i++) {
         // اضافه کردن جمله فعلی به مجموع
         if (i % 2 == 1) // جملات فرد: مثبت
@@ -18,6 +18,7 @@ double calculateSeriesSum(double x, int terms) {
         // term_next = term * (x^2) / [(2i)(2i+1)]
         int n = 2 * i;
         term = term * (x * x) / (n * (n + 1));
+        cout << term << "\n";
     }
     return sum;
 }
